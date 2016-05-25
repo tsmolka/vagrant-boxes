@@ -5,3 +5,17 @@ unless Vagrant.has_plugin?('vagrant-vcenter')
   system('vagrant plugin install vagrant-vcenter') || exit!
   exit system('vagrant', *ARGV)
 end
+
+Vagrant.configure(2) do |config|
+
+    config.vm.provider :vcenter do |vcenter|
+        
+        raise "VMWARE_HOST variable is not specified" if ! ENV.key?"VMWARE_HOST"
+        vcenter.hostname = ENV['VMWARE_HOST']
+        raise "VMWARE_USER variable is not specified" if ! ENV.key?"VMWARE_USER"
+        vcenter.username = ENV['VMWARE_USER']
+        raise "VMWARE_PASSWORD variable is not specified" if ! ENV.key?"VMWARE_PASSWORD"
+        vcenter.password = ENV['VMWARE_PASSWORD']
+        
+    end
+end

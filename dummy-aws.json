@@ -1,0 +1,15 @@
+{
+  "name": "dummy-aws",
+  "description": "",
+  "versions": [
+    {
+      "version": "20160525.0.0",
+      "providers": [
+        {
+          "name": "aws",
+          "url": "https://github.com/tsmolka/vagrant-boxes/raw/master/dummy-aws.box"
+        }
+      ]
+    }
+  ]
+}

@@ -23,6 +23,6 @@ Sample Vagrantfile:
 ```ruby
 
 Vagrant.configure(2) do |config|
-    config.vm.box = "https://github.com/tsmolka/vagrant-dummy/raw/master/dummy-aws.box"
+    config.vm.box = "https://github.com/tsmolka/vagrant-dummy/raw/master/dummy-aws.box"    
 end
 ```

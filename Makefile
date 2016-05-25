@@ -5,7 +5,7 @@ define BUILDBOX
 
 $(1).box: $(1)/metadata.json $(1)/Vagrantfile
 	@echo Building box "$(1).box"
-	tar cvzf $(1).box $(1)/metadata.json $(1)/Vagrantfile
+	tar cvzf $(1).box -C $(1) metadata.json Vagrantfile
 
 endef
 

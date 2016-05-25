@@ -1,0 +1,15 @@
+{
+  "name": "dummy-vcenter",
+  "description": "",
+  "versions": [
+    {
+      "version": "20160525.0.0",
+      "providers": [
+        {
+          "name": "vcenter",
+          "url": "https://github.com/tsmolka/vagrant-boxes/raw/master/dummy-vcenter.box"
+        }
+      ]
+    }
+  ]
+}
