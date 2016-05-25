@@ -1,0 +1,13 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+unless Vagrant.has_plugin?('vagrant-aws')
+  system('vagrant plugin install vagrant-aws') || exit!
+  exit system('vagrant', *ARGV)
+end
+
+Vagrant.configure("2") do |config|
+  config.vm.provider :aws do |aws|
+    aws.ami = "ami-fce3c696"    # Ubuntu Server 14.04 LTS (HVM)
+  end
+end

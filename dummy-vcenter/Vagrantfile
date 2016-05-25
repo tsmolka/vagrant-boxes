@@ -1,0 +1,7 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+unless Vagrant.has_plugin?('vagrant-vcenter')
+  system('vagrant plugin install vagrant-vcenter') || exit!
+  exit system('vagrant', *ARGV)
+end
