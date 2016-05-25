@@ -1,4 +1,4 @@
-BOXES=dummy-aws dummy-vcenter
+BOXES=dummy-aws dummy-vcenter dummy-vsphere
 BOX_FILES := $(foreach box, $(BOXES), $(box).box)
 
 define BUILDBOX
