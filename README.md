@@ -23,6 +23,10 @@ Sample Vagrantfile:
 ```ruby
 
 Vagrant.configure(2) do |config|
-    config.vm.box = "https://github.com/tsmolka/vagrant-dummy/raw/master/dummy-aws.box"    
+    config.vm.box = "https://rawgithub.com/tsmolka/vagrant-boxes/master/dummy-vcenter.json"
 end
 ```
+
+Note: JSON files are served from github.com as text/plain and Vagrant will fail to recognize
+such file as box metadata. Therefore it is adviced to use proxy service such as rawgithub.com
+that will add valid Content-Type. 
